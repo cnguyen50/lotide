@@ -11,11 +11,14 @@ const eqArrays = function(array1, array2) {
   } return arrayEq;
 };
 
-const assertArraysEqual = function(array1, array2) {
-  if (eqArrays(array1, array2) === true) {
-    return console.log(`✅ ✅ ✅ Assertion Passed: ${[array1]} === ${[array2]}`);
+const assertArraysEqual = function(arr1, arr2) {
+  if (eqArrays(arr1, arr2)) {
+    console.log(`✅ ✅ ✅ Assertion Passed: ${arr1} === ${arr2}`);
+    return true;
+  } else {
+    console.log(`🛑 🛑 🛑 Assertion Failed: ${arr1} !== ${array2}`);
+    return false
   }
-  return console.log(`🛑 🛑 🛑 Assertion Failed: ${[array1]} !== ${[array2]}`);
 };
 
 assertArraysEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);
