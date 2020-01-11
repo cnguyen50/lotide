@@ -21,15 +21,14 @@ const assertArraysEqual = function(arr1, arr2) {
 
 
 
-const middle = function(numOfArray) {
-  let output = [];
-  if (numOfArray.length % 2 !== 0) {
-    output.push(Math.ceil(numOfArray.length / 2));
-  } else {
-    output.push(numOfArray.length / 2);
-    output.push(numOfArray.length / 2 + 1);
+const middle = function(arr) {
+  if (arr.length <= 2) {
+    return [];
+  } else if (arr.length % 2 === 1) { // for Odd
+    return [arr[Math.floor(arr.length / 2)]];
+  } else { // for even
+    return [arr[arr.length / 2] - 1, arr[arr.length / 2]];
   }
-  return output;
 };
 
-//middle([1, 2, 3, 4, 5, 6]), [3, 4]); => [3,4]
+console.log(middle([1, 2, 3, 4, 5, 6]), [3, 4]);
