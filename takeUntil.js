@@ -11,9 +11,9 @@ const eqArrays = function(array1, array2) {
   
 const assertArraysEqual = function(arr1, arr2) {
   if (eqArrays(arr1, arr2) === true) {
-    console.log(`✅ ✅ ✅ Assertion Passed: ${arr1} === ${arr2}`);  
+    console.log(`✅ ✅ ✅ Assertion Passed: ${arr1} === ${arr2}`);
   } else {
-    console.log(`🛑 🛑 🛑 Assertion Failed: ${arr1} !== ${arr2}`);   
+    console.log(`🛑 🛑 🛑 Assertion Failed: ${arr1} !== ${arr2}`);
   }
 };
 
@@ -22,7 +22,7 @@ const assertArraysEqual = function(arr1, arr2) {
 const takeUntil = function(array, callback) {
   const result = [];
   for (const el of array) {
-    if (callback(el)){
+    if (callback(el)) {
       return result;
     } else {
       result.push(el);
