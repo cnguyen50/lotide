@@ -1,26 +1,5 @@
-const words = ["ground", "control", "to", "major", "tom"];
-
-
-const eqArrays = function(array1, array2) {
-  if (array1.length !== array2.length) {
-    return false;
-  } 
-  for (let i = 0; i < array1.length; i++) {
-    if (array1[i] !== array2[i]) {
-      return false;
-    } 
-  } return true; 
-};
-
-const assertArraysEqual = function(arr1, arr2) {
-  if (eqArrays(arr1, arr2) === true) {
-    console.log(`✅ ✅ ✅ Assertion Passed: ${arr1} === ${arr2}`);
-  
-  } else {
-    console.log(`🛑 🛑 🛑 Assertion Failed: ${arr1} !== ${arr2}`);
-    
-  }
-};
+const eqArrays = require('./eqArrays');
+const assertArraysEqual = require('./assertArraysEqual');
 
 
 const map = function (array, callback) {
@@ -30,7 +9,10 @@ const map = function (array, callback) {
   }
   return results;
 };
- 
 
-let convert = words.map(x => x.length)
-console.log(convert); // [ 6, 7, 2, 5, 3 ]
+module.exports = map;
+
+// let convert = words.map(x => x.length)
+// console.log(convert); // [ 6, 7, 2, 5, 3 ]
+// assertArraysEqual(convert, [ 6, 7, 2, 5, 3 ])
+// const words = ["ground", "control", "to", "major", "tom"];

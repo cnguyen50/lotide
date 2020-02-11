@@ -6,7 +6,9 @@
   "directories": {
     "test": "test"
   },
-  "dependencies": {},
+  "dependencies": {
+    "lotide": "^1.0.1"
+  },
   "devDependencies": {
     "chai": "^4.2.0",
     "mocha": "^7.0.0"

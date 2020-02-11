@@ -1,16 +1,19 @@
-const assertEqual = function(actual, expected) {
-  if (actual, expected) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
-  }
+const assertEqual = require('./assertEqual');
 
-};
 const tail = function(array) {
-  let tailArray = array.slice(1);
-  return tailArray;
+  let result = [];
+  for (let i = 1; i < array.length; i++) {
+    result.push(array[i]);
+  }
+  return result;
 };
 
-const result = tail(["Hello", "Lighthouse", "Labs"]);
+module.exports = tail;
 
-assertEqual(result, ["Lighthouse", "Labs"]);
+
+//(tail(["Hello", "Lighthouse", "Labs"]));
+
+// assertEqual(result, ["Lighthouse", "Labs"]);
+
+
+
